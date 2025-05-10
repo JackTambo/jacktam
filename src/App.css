@@ -1,0 +1,201 @@
+
+#root {
+  width: 100%;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(100, 108, 255, 0.6));
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.6));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .spin {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Cartoony Styles */
+.cartoon-shadow {
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cartoon-shadow:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.2);
+}
+
+.cartoon-border {
+  border: 4px solid #000;
+  border-radius: 20px;
+}
+
+.bubble-button {
+  background: #55d8ff;
+  border: 3px solid #000;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 4px 4px 0px #000;
+  transform: translateY(0);
+  transition: all 0.2s ease;
+}
+
+.bubble-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 9px 0px #000;
+}
+
+.bubble-button:active {
+  transform: translateY(0);
+  box-shadow: 2px 2px 0px #000;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.bouncy {
+  animation: bounce 2s ease infinite;
+}
+
+.squiggle {
+  position: relative;
+}
+
+.squiggle:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='10' viewBox='0 0 100 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5 Q 25 0, 50 5 T 100 5' stroke='%23ff6b6b' stroke-width='4' fill='none'/%3E%3C/svg%3E") repeat-x;
+  background-size: 100px 10px;
+}
+
+.cartoon-card {
+  background-color: #fff;
+  border: 4px solid #000;
+  border-radius: 30px;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.cartoon-card:hover {
+  transform: rotate(1deg);
+}
+
+.cartoon-bg {
+  background-image: 
+    radial-gradient(#ffcc5c 15%, transparent 16%),
+    radial-gradient(#ffcc5c 15%, transparent 16%);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  background-color: #88d8ff;
+}
+
+.wiggle {
+  animation: wiggle 2.5s infinite;
+}
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-5deg);
+  }
+  20% {
+    transform: rotateZ(3deg);
+  }
+  25% {
+    transform: rotateZ(-3deg);
+  }
+  30% {
+    transform: rotateZ(2deg);
+  }
+  35% {
+    transform: rotateZ(-1deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+.doodle-hr {
+  height: 6px;
+  border: 0;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='6' viewBox='0 0 100 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 0,3 Q 10,6 20,3 T 40,3 T 60,3 T 80,3 T 100,3' stroke='%23ff6b6b' stroke-width='2' fill='none'/%3E%3C/svg%3E") repeat-x;
+  margin: 2rem 0;
+}
+
+.progress-bar {
+  height: 20px;
+  border: 3px solid #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #55d8ff,
+    #55d8ff 10px,
+    #4ac3e6 10px,
+    #4ac3e6 20px
+  );
+  transition: width 1s ease-in-out;
+}
+
+/* Fun shape decorations */
+.shape-circle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #FFD166;
+  border: 3px solid #000;
+  z-index: -1;
+}
+
+.shape-triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 80px solid #FF6B6B;
+  z-index: -1;
+}
+
+.shape-rectangle {
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  background: #06D6A0;
+  border: 3px solid #000;
+  transform: rotate(15deg);
+  z-index: -1;
+}
+
